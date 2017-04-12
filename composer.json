@@ -12,6 +12,9 @@
         "illuminate/contracts": "^5.1",
         "illuminate/support": "^5.1"
     },
+    "require-dev": {
+        "phpunit/phpunit": "^6.0"
+    },
     "autoload": {
         "psr-4": {
             "Foo\\Bar\\Example\\": "src/"
