@@ -4,7 +4,16 @@ namespace Foo\Bar\Example;
 
 class Cats
 {
-    protected $names = ['Molly', 'Bella', 'Jack', 'Kitty'];
+    protected $names;
+
+    public function __construct(array $names)
+    {
+        if (count($names) === 0) {
+            throw new \InvalidArgumentException('There must be a choice of at least 1 cat.');
+        }
+
+        $this->names = array_values($names);
+    }
 
     public function generate()
     {
